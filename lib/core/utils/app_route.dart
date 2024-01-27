@@ -4,6 +4,7 @@ import 'package:fruitsapp/features/Login&SignUp/layer2_login/log_in.dart';
 import 'package:fruitsapp/features/layer1-startedScreen/peresntation/views/statrt_page.dart';
 import 'package:fruitsapp/features/layer3_mainscreen/presentation/mainscreen3.dart';
 import 'package:fruitsapp/features/orders_layer/presentation/orders_screen.dart';
+import 'package:fruitsapp/features/search_screen/presentation/search_screen.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -12,6 +13,8 @@ abstract class AppRouter {
   static const kHistory = '/HistoryScreen';
   static const kOrders = '/OrdersScreen';
   static const kSignUp = '/SignUp';
+  static const kSearchPage = '/SearchPage';
+
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
@@ -36,6 +39,10 @@ abstract class AppRouter {
     GoRoute(
       path: kSignUp,
       builder: (context, state) => const SignUpScreen(),
+    ),
+    GoRoute(
+      path: kSearchPage,
+      builder: (context, state) => const SearchScreen(),
     ),
   ]);
 }

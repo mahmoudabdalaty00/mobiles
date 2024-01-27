@@ -36,7 +36,12 @@ class MainScreenBody extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const SearchForm(),
+            GestureDetector(
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kSearchPage);
+              },
+              child: const SearchForm(),
+            ),
             const SizedBox(
               height: 70,
             ),
@@ -95,7 +100,7 @@ class MainScreenBody extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
