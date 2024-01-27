@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruitsapp/core/utils/app_route.dart';
 
 import 'package:go_router/go_router.dart';
 
@@ -15,7 +14,7 @@ class CustomButtonHistory extends StatelessWidget {
       width: 314,
       child: TextButton(
         style: TextButton.styleFrom(
-          backgroundColor: Color(0xffFF460A),
+          backgroundColor: const Color(0xffFF460A),
         ),
         onPressed: () {
           GoRouter.of(context).push(

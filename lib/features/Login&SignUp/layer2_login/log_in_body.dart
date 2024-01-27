@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruitsapp/core/utils/app_route.dart';
 import 'package:fruitsapp/features/widgets/logscreens/custom_button_login.dart';
 import 'package:fruitsapp/features/widgets/logscreens/custom_text_filed.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({super.key});
@@ -37,10 +38,10 @@ class LoginBody extends StatelessWidget {
               const SizedBox(
                 height: 80,
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Column(
+                  const Column(
                     children: [
                       Text(
                         'Login',
@@ -59,14 +60,19 @@ class LoginBody extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Text(
-                        'Sign_Up',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
+                      GestureDetector(
+                        onTap: () {
+                          GoRouter.of(context).push(AppRouter.kSignUp);
+                        },
+                        child: const Text(
+                          'Sign_Up',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 2,
                         color: Colors.white,
                       ),
@@ -113,6 +119,7 @@ class LoginBody extends StatelessWidget {
         ),
         const LogCustomButton(
           data: AppRouter.kMainScreen,
+          text: 'Log in',
         ),
       ],
     );
