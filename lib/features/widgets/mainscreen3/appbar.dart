@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruitsapp/core/utils/app_route.dart';
+import 'package:go_router/go_router.dart';
 
 class AppBarmain extends StatelessWidget {
   const AppBarmain({super.key});
@@ -6,7 +8,9 @@ class AppBarmain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4.5),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 0,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -15,7 +19,9 @@ class AppBarmain extends StatelessWidget {
             icon: const Icon(Icons.list),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kOrders);
+            },
             icon: const Icon(
               Icons.shopping_cart,
             ),
