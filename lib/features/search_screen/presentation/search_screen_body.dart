@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruitsapp/core/utils/app_route.dart';
 import 'package:fruitsapp/features/search_screen/presentation/search_item_show.dart';
+import 'package:go_router/go_router.dart';
 
 class SearchScreenBody extends StatelessWidget {
   const SearchScreenBody({super.key});
@@ -40,7 +42,13 @@ class SearchScreenBody extends StatelessWidget {
                   itemCount: 20,
                   clipBehavior: Clip.none,
                   itemBuilder: (context, index) {
-                    return const SearchItemShow();
+                    return GestureDetector(
+                        onTap: () {
+                          GoRouter.of(context).push(
+                            AppRouter.kItemDetails,
+                          );
+                        },
+                        child: const SearchItemShow());
                   },
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,

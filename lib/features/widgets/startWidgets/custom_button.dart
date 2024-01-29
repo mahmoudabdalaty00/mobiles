@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
         ),
         onPressed: () {
           GoRouter.of(context).push(
-            AppRouter.kloginRoute,
+            AppRouter.loginRoute,
           );
         },
         child: const Text(

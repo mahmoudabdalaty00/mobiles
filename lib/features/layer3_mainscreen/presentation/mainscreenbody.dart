@@ -36,12 +36,15 @@ class MainScreenBody extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            GestureDetector(
-              onTap: () {
-                GoRouter.of(context).push(AppRouter.kSearchPage);
-              },
-              child: const SearchForm(),
-            ),
+            ElevatedButton(
+                onPressed: () {
+                  GoRouter.of(context).push(
+                    AppRouter.kItemNotFOund,
+                  );
+                },
+                child: const Expanded(
+                  child: SearchForm(),
+                )),
             const SizedBox(
               height: 70,
             ),
@@ -52,12 +55,18 @@ class MainScreenBody extends StatelessWidget {
                 itemCount: 20,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: ((context, index) {
-                  return const SizedBox(
+                  return SizedBox(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
-                      child: ItemShow(),
+                      child: GestureDetector(
+                          onTap: () {
+                            GoRouter.of(context).push(
+                              AppRouter.kItemDetails,
+                            );
+                          },
+                          child: const ItemShow()),
                     ),
                   );
                 }),
