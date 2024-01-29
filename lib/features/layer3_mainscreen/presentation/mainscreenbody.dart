@@ -84,7 +84,11 @@ class MainScreenBody extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(
+                      AppRouter.kMyProfile,
+                    );
+                  },
                   icon: const Icon(
                     FontAwesomeIcons.user,
                     size: 25,
@@ -92,7 +96,9 @@ class MainScreenBody extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    GoRouter.of(context).push(AppRouter.kHistory);
+                    GoRouter.of(context).push(
+                      AppRouter.kHistory,
+                    );
                   },
                   icon: const Icon(
                     FontAwesomeIcons.clockRotateLeft,
