@@ -56,7 +56,7 @@ class HistoryScreenBody extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 150),
             child: CustomButtonHistory(
-              data: AppRouter.kHistory,
+              data: AppRouter.kMainScreen,
               text: 'Start Ordering',
             ),
           ),

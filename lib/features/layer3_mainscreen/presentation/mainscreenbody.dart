@@ -36,20 +36,18 @@ class MainScreenBody extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            ElevatedButton(
-                onPressed: () {
+            InkWell(
+                onTap: () {
                   GoRouter.of(context).push(
                     AppRouter.kItemNotFOund,
                   );
                 },
-                child: const Expanded(
-                  child: SearchForm(),
-                )),
+                child: const SearchForm()),
             const SizedBox(
               height: 70,
             ),
             SizedBox(
-              height: 360,
+              height: 350,
               child: ListView.builder(
                 clipBehavior: Clip.none,
                 itemCount: 20,
@@ -86,7 +84,11 @@ class MainScreenBody extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(
+                      AppRouter.kOrders,
+                    );
+                  },
                   icon: const Icon(
                     FontAwesomeIcons.heart,
                     size: 25,

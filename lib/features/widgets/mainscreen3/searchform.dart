@@ -15,11 +15,11 @@ class SearchForm extends StatelessWidget {
         height: 60,
         child: TextField(
           decoration: InputDecoration(
-            prefixIcon: GestureDetector(
-              onTap: () {
+            prefixIcon: IconButton(
+              onPressed: () {
                 GoRouter.of(context).push(AppRouter.kSearchPage);
               },
-              child: const Icon(
+              icon: const Icon(
                 Icons.search_outlined,
                 size: 30,
                 color: Colors.grey,

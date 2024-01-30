@@ -56,7 +56,7 @@ class MyProfileBody extends StatelessWidget {
               height: 92,
             ),
             CustomButtonHistory(
-              data: AppRouter.kMainScreen,
+              data: AppRouter.kMyProfile,
               text: 'Update Information',
             )
           ],
