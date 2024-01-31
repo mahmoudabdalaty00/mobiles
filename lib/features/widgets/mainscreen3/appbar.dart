@@ -16,7 +16,7 @@ class AppBarmain extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              GoRouter.of(context).push(AppRouter.kCheckOut);
+              GoRouter.of(context).push(AppRouter.kCheckOutDelivery);
             },
             icon: const Icon(Icons.list),
           ),

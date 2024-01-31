@@ -2,6 +2,7 @@ import 'package:fruitsapp/features/Item_details_layer/Presenation/item_idatails_
 import 'package:fruitsapp/features/Login&SignUp/sign_up/signup.dart';
 import 'package:fruitsapp/features/Myprofile_layers/presentation/myprofile.dart';
 import 'package:fruitsapp/features/check_out_layer/presentation_1/delivery/check_out_screen.dart';
+import 'package:fruitsapp/features/check_out_layer/presentation_1/payment/check_out_payment_body.dart';
 import 'package:fruitsapp/features/history_layers/presentation/historyscreen.dart';
 import 'package:fruitsapp/features/Login&SignUp/layer2_login/log_in.dart';
 import 'package:fruitsapp/features/layer1-startedScreen/peresntation/views/statrt_page.dart';
@@ -21,7 +22,8 @@ abstract class AppRouter {
   static const kMyProfile = '/MyProfile';
   static const kItemDetails = '/ItemDetails';
   static const kItemNotFOund = '/ItemNotFOund';
-  static const kCheckOut = '/CheckOut';
+  static const kCheckOutDelivery = '/CheckOut';
+  static const kCheckOutPayment = '/CheckOutPayment';
 
   static final router = GoRouter(routes: [
     GoRoute(
@@ -65,8 +67,12 @@ abstract class AppRouter {
       builder: (context, state) => const ItemNotFound(),
     ),
     GoRoute(
-      path: kCheckOut,
+      path: kCheckOutDelivery,
       builder: (context, state) => const CheckOutScreen(),
+    ),
+    GoRoute(
+      path: kCheckOutPayment,
+      builder: (context, state) => const CheckOutPaymentBody(),
     ),
   ]);
 }

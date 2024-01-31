@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruitsapp/core/utils/app_route.dart';
-import 'package:fruitsapp/features/check_out_layer/presentation_1/delivery/addres_detailes_card.dart';
 import 'package:fruitsapp/features/check_out_layer/presentation_1/delivery_method_card.dart';
+import 'package:fruitsapp/features/check_out_layer/presentation_1/payment/payment_method_card_checkout.dart';
 import 'package:fruitsapp/features/widgets/HistoryWidgets/custombuutomhistiry.dart';
 import 'package:go_router/go_router.dart';
 
-class CheckOutBody extends StatelessWidget {
-  const CheckOutBody({super.key});
+class CheckOutPaymentBody extends StatelessWidget {
+  const CheckOutPaymentBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class CheckOutBody extends StatelessWidget {
                   IconButton(
                     onPressed: () {
                       GoRouter.of(context).push(
-                        AppRouter.kMainScreen,
+                        AppRouter.kCheckOutDelivery,
                       );
                     },
                     icon: const Icon(
@@ -56,7 +56,7 @@ class CheckOutBody extends StatelessWidget {
               height: 40,
             ),
             const Text(
-              'Delivery',
+              'Payment',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 32,
@@ -66,26 +66,15 @@ class CheckOutBody extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Address details',
+                Text(
+                  'Payment Method',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                  ),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: const Text(
-                    'Change',
-                    style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
                   ),
                 ),
               ],
@@ -93,12 +82,12 @@ class CheckOutBody extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const AddressDetailCard(),
+            const CheckOutPaymentMethodCard(),
             const SizedBox(
               height: 30,
             ),
             const Text(
-              'Delivery method.',
+              'Delivery method',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 18,
@@ -106,7 +95,7 @@ class CheckOutBody extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 25,
+              height: 15,
             ),
             const DeliveryMethod(),
             const SizedBox(

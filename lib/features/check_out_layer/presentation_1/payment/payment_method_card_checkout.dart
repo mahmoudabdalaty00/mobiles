@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class PaymentMethodCard extends StatelessWidget {
-  const PaymentMethodCard({super.key});
+class CheckOutPaymentMethodCard extends StatelessWidget {
+  const CheckOutPaymentMethodCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class PaymentMethodCard extends StatelessWidget {
               IconButton(
                 onPressed: () {},
                 icon: const Icon(
-                  Icons.circle_outlined,
+                  FontAwesomeIcons.circle,
                 ),
               ),
               const SizedBox(
@@ -111,56 +111,7 @@ class PaymentMethodCard extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 15,
-          ),
-          const Divider(
-            height: 3,
-            color: Colors.grey,
-            indent: 51,
-            endIndent: 30,
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 0,
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.circle_outlined,
-                ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  color: const Color(0xFF0038FF),
-                  borderRadius: BorderRadius.circular(
-                    10,
-                  ),
-                ),
-                child: const Icon(
-                  Icons.paypal,
-                  size: 14,
-                ),
-              ),
-              const SizedBox(
-                width: 15,
-              ),
-              const Text(
-                'Pay on delivery',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-            ],
+            height: 30,
           ),
           const SizedBox(
             height: 30,
