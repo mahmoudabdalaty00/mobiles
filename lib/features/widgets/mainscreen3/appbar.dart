@@ -15,7 +15,9 @@ class AppBarmain extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kCheckOut);
+            },
             icon: const Icon(Icons.list),
           ),
           IconButton(
