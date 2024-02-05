@@ -43,10 +43,10 @@ class CheckOutPaymentBody extends StatelessWidget {
                     width: 80,
                   ),
                   const Text(
-                    'Checkout',
+                    'Cart',
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 18,
+                      fontSize: 22,
                     ),
                   ),
                 ],

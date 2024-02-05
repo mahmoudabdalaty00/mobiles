@@ -1,3 +1,4 @@
+import 'package:fruitsapp/features/Cart/presentation/cart_screen.dart';
 import 'package:fruitsapp/features/Item_details_layer/Presenation/item_idatails_screen.dart';
 import 'package:fruitsapp/features/Login&SignUp/sign_up/signup.dart';
 import 'package:fruitsapp/features/Myprofile_layers/presentation/myprofile.dart';
@@ -24,7 +25,7 @@ abstract class AppRouter {
   static const kItemNotFOund = '/ItemNotFOund';
   static const kCheckOutDelivery = '/CheckOut';
   static const kCheckOutPayment = '/CheckOutPayment';
-
+  static const kCart = '/Cart';
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
@@ -73,6 +74,10 @@ abstract class AppRouter {
     GoRoute(
       path: kCheckOutPayment,
       builder: (context, state) => const CheckOutPaymentBody(),
+    ),
+    GoRoute(
+      path: kCart,
+      builder: (context, state) => const CartScreen(),
     ),
   ]);
 }

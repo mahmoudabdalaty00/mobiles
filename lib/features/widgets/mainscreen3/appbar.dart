@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fruitsapp/core/utils/app_route.dart';
 import 'package:go_router/go_router.dart';
 
-class AppBarmain extends StatelessWidget {
-  const AppBarmain({super.key});
+class AppBarMain extends StatelessWidget {
+  const AppBarMain({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class AppBarmain extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              GoRouter.of(context).push(AppRouter.kOrders);
+              GoRouter.of(context).push(AppRouter.kCart);
             },
             icon: const Icon(
               Icons.shopping_cart,

@@ -21,7 +21,7 @@ class MainScreenBody extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.all(0),
           children: [
-            const AppBarmain(),
+            const AppBarMain(),
             const SizedBox(
               height: 20,
             ),
