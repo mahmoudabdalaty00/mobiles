@@ -16,9 +16,7 @@ class AppBarMain extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              GoRouter.of(context).push(
-                AppRouter.kSideMenu,
-              );
+              stst
             },
             icon: const Icon(Icons.list),
           ),
