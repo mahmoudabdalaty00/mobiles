@@ -11,6 +11,7 @@ import 'package:fruitsapp/features/layer3_mainscreen/presentation/mainscreen3.da
 import 'package:fruitsapp/features/orders_layer/presentation/orders_screen.dart';
 import 'package:fruitsapp/features/search_screen/presentation/item_not_found/item_not_found.dart';
 import 'package:fruitsapp/features/search_screen/presentation/search_screen.dart';
+import 'package:fruitsapp/features/side_menu/presentation/side_menu.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -26,6 +27,8 @@ abstract class AppRouter {
   static const kCheckOutDelivery = '/CheckOut';
   static const kCheckOutPayment = '/CheckOutPayment';
   static const kCart = '/Cart';
+  static const kSideMenu = '/SideMenu';
+
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
@@ -78,6 +81,10 @@ abstract class AppRouter {
     GoRoute(
       path: kCart,
       builder: (context, state) => const CartScreen(),
+    ),
+    GoRoute(
+      path: kSideMenu,
+      builder: (context, state) => const SideMenu(),
     ),
   ]);
 }

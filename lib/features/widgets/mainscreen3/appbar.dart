@@ -16,13 +16,17 @@ class AppBarMain extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              GoRouter.of(context).push(AppRouter.kCheckOutDelivery);
+              GoRouter.of(context).push(
+                AppRouter.kSideMenu,
+              );
             },
             icon: const Icon(Icons.list),
           ),
           IconButton(
             onPressed: () {
-              GoRouter.of(context).push(AppRouter.kCart);
+              GoRouter.of(context).push(
+                AppRouter.kCart,
+              );
             },
             icon: const Icon(
               Icons.shopping_cart,

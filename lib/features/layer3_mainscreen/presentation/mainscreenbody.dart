@@ -25,12 +25,19 @@ class MainScreenBody extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              'Delicious food\n for you',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
+            InkWell(
+              onTap: () {
+                GoRouter.of(context).push(
+                  AppRouter.kCheckOutDelivery,
+                );
+              },
+              child: const Text(
+                'Delicious food\n for you',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(
